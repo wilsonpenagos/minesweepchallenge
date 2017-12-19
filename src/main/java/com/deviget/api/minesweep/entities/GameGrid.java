@@ -3,7 +3,6 @@ package com.deviget.api.minesweep.entities;
 import com.deviget.api.minesweep.exceptions.ExceededGridValuesException;
 import com.deviget.api.minesweep.exceptions.OutOfBoundsGridException;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 public class BaseRestController<T extends IEntity> extends BaseController {
 
-    public BaseRestController(){}
     public BaseRestController(IRestService service){
         this.service = service;
     }
 
-    private IRestService service;
+    public IRestService service;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public T get(@PathVariable Long id) {

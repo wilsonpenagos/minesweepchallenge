@@ -9,5 +9,5 @@ public interface IRestService<T extends IEntity> {
 
     T save(T entity);
     T findOne(Long id);
-
+    T create(int a, int b, int c);
 }
