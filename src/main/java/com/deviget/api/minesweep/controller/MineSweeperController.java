@@ -28,11 +28,21 @@ public class MineSweeperController extends BaseRestController<MineSweeper> {
     }
 
 
-    @RequestMapping(method = RequestMethod.POST)
-    public MineSweeper create(@RequestParam(value="rows") Integer rows,
-                       @RequestParam(value="columns") Integer columns,
-                       @RequestParam(value="mines") Integer mines){
-        return mineSweeperService.create(rows, columns, mines);
+    @RequestMapping(method = RequestMethod.POST, params = { "rows", "columns", "mines"})
+    public ResponseEntity create(@RequestParam(value="rows") Integer rows,
+                                 @RequestParam(value="columns") Integer columns,
+                                 @RequestParam(value="mines") Integer mines
+    )throws ExceededGridValuesException{
+        return new ResponseEntity(
+                new Response(
+                        new Result(
+                                Status.OKAY,
+                                "Success"
+                        ),
+                        mineSweeperService.createMineSweeper(rows, columns, mines)
+                ),
+                HttpStatus.OK
+        );
     }
 
 

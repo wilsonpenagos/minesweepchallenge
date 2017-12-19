@@ -50,7 +50,7 @@ public class GameGrid implements IEntity{
                     List<Coordinate> neighbors = getNeighbors(evalCoordinate);
                     int value = 0;
                     for (Coordinate coord : neighbors){
-                        if (result.get(coord).getValue().equals(-1)){
+                        if (result.containsKey(coord) && result.get(coord).getValue().equals(-1)){
                                 value++;
                         }
                     }
