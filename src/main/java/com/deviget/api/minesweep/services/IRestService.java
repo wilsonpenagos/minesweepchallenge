@@ -2,8 +2,6 @@ package com.deviget.api.minesweep.services;
 
 import com.deviget.api.minesweep.entities.IEntity;
 
-import java.util.List;
-
 /**
  * Created by wilson.penagos on 18/12/17.
  */
