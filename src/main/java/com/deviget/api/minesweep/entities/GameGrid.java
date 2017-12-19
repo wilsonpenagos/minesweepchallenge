@@ -51,7 +51,7 @@ public class GameGrid implements IEntity{
                     List<Coordinate> neighbors = getNeighbors(evalCoordinate);
                     int value = 0;
                     for (Coordinate coord : neighbors){
-                        if (result.containsKey(coord) && result.get(coord).getValue().equals(-1)){
+                        if (result.get(coord).getValue().equals(-1)){
                                 value++;
                         }
                     }
@@ -106,7 +106,17 @@ public class GameGrid implements IEntity{
         if (!gameCells.containsKey(evalCoordinate)){
             throw new OutOfBoundsGridException();
         }
-        gameCells.get(evalCoordinate).setRevealed(true);
+        GameCell gameCell =  gameCells.get(evalCoordinate);
+        gameCell.setRevealed(true);
+        if(gameCell.getValue().equals(0)){
+            List<Coordinate> neighbors = getNeighbors(evalCoordinate);
+            for (Coordinate coord : neighbors){
+                GameCell neighborCell = gameCells.get(coord);
+                if (!neighborCell.getValue().equals(-1) && !neighborCell.getRevealed()){
+                    reveal(coord.getxVal(), coord.getyVal());
+                }
+            }
+        }
     }
 
     public boolean isCleanGrid() {

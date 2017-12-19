@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34681ae5-cfa3-480d-8aaa-a22648ce08de" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java" afterPath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/MineSweeper.java" afterPath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/MineSweeper.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,12 +73,12 @@
       <file leaf-file-name="GameGrid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+            <state relative-caret-position="611">
+              <caret line="117" column="13" lean-forward="true" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4699#4700#0" expanded="true" />
-                <element signature="e#4731#4732#0" expanded="true" />
+                <element signature="e#5126#5127#0" expanded="true" />
+                <element signature="e#5158#5159#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -904,12 +904,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513635762552</updated>
-      <workItem from="1513635763825" duration="13307000" />
+      <workItem from="1513635763825" duration="14054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13307000" />
+    <option name="totallyTimeSpent" value="14054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1133,12 +1133,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+        <state relative-caret-position="611">
+          <caret line="117" column="13" lean-forward="true" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4699#4700#0" expanded="true" />
-            <element signature="e#4731#4732#0" expanded="true" />
+            <element signature="e#5126#5127#0" expanded="true" />
+            <element signature="e#5158#5159#0" expanded="true" />
           </folding>
         </state>
       </provider>
