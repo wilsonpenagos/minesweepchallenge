@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34681ae5-cfa3-480d-8aaa-a22648ce08de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameCell.java" afterPath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameCell.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java" afterPath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameStatus.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/MineSweeper.java" afterPath="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/MineSweeper.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -72,16 +70,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameGrid.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameGrid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="974">
-              <caret line="52" column="40" lean-forward="false" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+            <state relative-caret-position="254">
+              <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3710#3711#0" expanded="true" />
-                <element signature="e#3742#3743#0" expanded="true" />
+                <element signature="e#4699#4700#0" expanded="true" />
+                <element signature="e#4731#4732#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutOfBoundsGridException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/exceptions/OutOfBoundsGridException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,13 +107,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MineSweeper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MineSweeper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/MineSweeper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="520">
+              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1413#1414#0" expanded="true" />
+                <element signature="e#1444#1445#0" expanded="true" />
+                <element signature="e#1485#1486#0" expanded="true" />
+                <element signature="e#1518#1519#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1597#1598#0" expanded="true" />
+                <element signature="e#1641#1642#0" expanded="true" />
+                <element signature="e#1674#1675#0" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,8 +184,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/exceptions/ExceededGridValuesException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameCell.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/exceptions/OutOfBoundsGridException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/MineSweeper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java" />
       </list>
     </option>
   </component>
@@ -445,6 +464,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.deviget.api.minesweep.exceptions" />
       <recent name="com.deviget.api.minesweep.entities" />
     </key>
   </component>
@@ -884,12 +904,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513635762552</updated>
-      <workItem from="1513635763825" duration="11031000" />
+      <workItem from="1513635763825" duration="13307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11031000" />
+    <option name="totallyTimeSpent" value="13307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1083,24 +1103,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/exceptions/OutOfBoundsGridException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="974">
-          <caret line="52" column="40" lean-forward="false" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3710#3711#0" expanded="true" />
-            <element signature="e#3742#3743#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/MineSweeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="520">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/deviget/api/minesweep/entities/GameGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
+            <element signature="e#4731#4732#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,7 +1,9 @@
 package com.deviget.api.minesweep.entities;
 
 import com.deviget.api.minesweep.exceptions.ExceededGridValuesException;
+import com.deviget.api.minesweep.exceptions.OutOfBoundsGridException;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -97,6 +99,34 @@ public class GameGrid implements IEntity{
             result.add(new Coordinate(xVal - 1, yVal -1));
         }
         return result;
+    }
+
+    public void reveal(Integer row, Integer col) throws OutOfBoundsGridException {
+        Coordinate evalCoordinate = new Coordinate(row, col);
+        if (!gameCells.containsKey(evalCoordinate)){
+            throw new OutOfBoundsGridException();
+        }
+        gameCells.get(evalCoordinate).setRevealed(true);
+    }
+
+    public boolean isCleanGrid() {
+        for(Coordinate coord : gameCells.keySet()){
+            GameCell curr = gameCells.get(coord);
+            if(!curr.getValue().equals(-1) && !curr.getRevealed()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean hasReveledMine() {
+        for(Coordinate coord : gameCells.keySet()){
+            GameCell curr = gameCells.get(coord);
+            if(curr.getRevealed() && curr.getValue().equals(-1)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public Integer getRows() {
