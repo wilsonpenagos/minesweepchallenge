@@ -1,28 +1,102 @@
 package com.deviget.api.minesweep.entities;
 
+import com.deviget.api.minesweep.exceptions.ExceededGridValuesException;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by wilson.penagos on 18/12/17.
  */
 public class GameGrid implements IEntity{
 
-    public static final Integer MAX_ROWS = 100;
-    public static final Integer MAX_COLS = 100;
-    public static final Integer MAX_MINES = 100;
+    public static final Integer MAX_ROWS = 50;
+    public static final Integer MAX_COLS = 50;
+    public static final Integer MAX_MINES = 25;
 
     private Integer rows;
     private Integer columns;
     private Integer mines;
-    private List<GameCell> gameCells;
+    private HashMap<Coordinate, GameCell> gameCells;
 
-    public GameGrid(Integer rows, Integer columns, Integer mines) {
+    public GameGrid(Integer rows, Integer columns, Integer mines) throws ExceededGridValuesException{
+        if (rows > MAX_ROWS || columns > MAX_COLS || mines > MAX_MINES){
+            throw new ExceededGridValuesException();
+        }
         this.rows = rows;
         this.columns = columns;
         this.mines = mines;
-        //TODO: Logic that fills the gameCells list;
-        this.gameCells = new ArrayList<>();
+        this.gameCells = fillGameCells();
+    }
+
+    private HashMap<Coordinate, GameCell> fillGameCells() {
+        Random rand = new Random();
+        HashMap<Coordinate, GameCell> result = new HashMap<>();
+        for(int i = 0; i < mines; i++){
+            int xRand = rand.nextInt(rows);
+            int yRand = rand.nextInt(rows);
+            Coordinate evalCoordinate = new Coordinate(xRand, yRand);
+            if (!result.containsKey(evalCoordinate)){
+                result.put(evalCoordinate, new GameCell(evalCoordinate, false, -1));
+            }
+        }
+        for (int i = 0; i < rows; i++){
+            for (int j = 0; j < columns; i++){
+                Coordinate evalCoordinate = new Coordinate(i, j);
+                if (!result.containsKey(evalCoordinate)){
+                    List<Coordinate> neighbors = getNeighbors(evalCoordinate);
+                    int value = 0;
+                    for (Coordinate coord : neighbors){
+                        if (result.containsKey(coord) && result.get(coord).getValue().equals(-1)){
+                                value++;
+                        }
+                    }
+                    result.put(evalCoordinate, new GameCell(evalCoordinate, false, value));
+                }
+            }
+        }
+        return result;
+    }
+
+    private List<Coordinate> getNeighbors(Coordinate coord) {
+        int xVal = coord.getxVal();
+        int yVal = coord.getyVal();
+        List<Coordinate> result = new ArrayList<>();
+        // 0 . 1
+        if (!(yVal + 1 >= columns)){
+            result.add(new Coordinate(xVal, yVal + 1));
+        }
+        // 0 . -1
+        if (!(yVal - 1 < 0)){
+            result.add(new Coordinate(xVal, yVal - 1));
+        }
+        // 1 . 0
+        if (!(xVal + 1 >= rows)){
+            result.add(new Coordinate(xVal + 1, yVal));
+        }
+        // 1 . 1
+        if (!(xVal + 1 >= rows) && !(yVal + 1 >= columns)){
+            result.add(new Coordinate(xVal + 1, yVal +1));
+        }
+        // 1 . -1
+        if (!(xVal + 1 >= rows) && !(yVal - 1 < 0)){
+            result.add(new Coordinate(xVal + 1, yVal -1));
+        }
+        // -1 . 0
+        if (!(xVal - 1 < 0)){
+            result.add(new Coordinate(xVal - 1, yVal));
+        }
+        // -1 . 1
+        if (!(xVal - 1 < 0) && !(yVal + 1 >= columns)){
+            result.add(new Coordinate(xVal - 1, yVal +1));
+        }
+        // -1 . -1
+        if (!(xVal - 1 < 0) && !(yVal - 1 < 0)){
+            result.add(new Coordinate(xVal - 1, yVal -1));
+        }
+        return result;
     }
 
     public Integer getRows() {
@@ -37,7 +111,7 @@ public class GameGrid implements IEntity{
         return mines;
     }
 
-    public List<GameCell> getGameCells() {
+    public HashMap<Coordinate, GameCell> getGameCells() {
         return gameCells;
     }
 

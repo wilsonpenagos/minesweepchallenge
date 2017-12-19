@@ -16,6 +16,30 @@ public class GameCell implements IEntity{
         this.value = value;
     }
 
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+
+    public void setCoordinate(Coordinate coordinate) {
+        this.coordinate = coordinate;
+    }
+
+    public Boolean getRevealed() {
+        return revealed;
+    }
+
+    public void setRevealed(Boolean revealed) {
+        this.revealed = revealed;
+    }
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
+    }
+
     // Applies to every entity in the model, for future persistence implementation.
     private Long id;
 
